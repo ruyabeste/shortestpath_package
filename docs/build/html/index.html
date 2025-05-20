@@ -1,0 +1,194 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="English" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shortest Path Python Package &mdash; Shortest Path Documentation 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=2ed17a75"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            Shortest Path Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Shortest Path Python Package</a></li>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#usage-example">Usage Example</a></li>
+<li><a class="reference internal" href="#function-explanation">Function Explanation</a></li>
+<li><a class="reference internal" href="#license">License</a></li>
+<li><a class="reference internal" href="#contribution">Contribution</a></li>
+<li><a class="reference internal" href="#roadmap">Roadmap</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Shortest Path Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Shortest Path Python Package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="shortest-path-python-package">
+<h1>Shortest Path Python Package<a class="headerlink" href="#shortest-path-python-package" title="Link to this heading"></a></h1>
+<p>Welcome! This Python package provides a function to calculate the shortest
+(great-circle) distance between two geographical coordinates using the <strong>Haversine formula</strong>.</p>
+<p>It is useful for geospatial tasks, navigation systems, travel estimations, and
+educational purposes. The package is lightweight and dependency-free.</p>
+<p>---</p>
+</section>
+<section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h1>
+<p>Install from TestPyPI:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-i<span class="w"> </span>https://test.pypi.org/simple<span class="w"> </span>shortestpath12345678
+</pre></div>
+</div>
+<p>Or clone from GitHub and install locally:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/yourusername/shortestpath_project.git
+<span class="nb">cd</span><span class="w"> </span>shortestpath_project
+pip<span class="w"> </span>install<span class="w"> </span>.
+</pre></div>
+</div>
+<p>---</p>
+</section>
+<section id="usage-example">
+<h1>Usage Example<a class="headerlink" href="#usage-example" title="Link to this heading"></a></h1>
+<p>Here's how you can use the package in your Python code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">shortest_path.shortestpath</span> <span class="kn">import</span> <span class="n">haversine</span>
+
+<span class="c1"># Paris (48.8566, 2.3522) to London (51.5074, -0.1278)</span>
+<span class="n">distance</span> <span class="o">=</span> <span class="n">haversine</span><span class="p">(</span><span class="mf">48.8566</span><span class="p">,</span> <span class="mf">2.3522</span><span class="p">,</span> <span class="mf">51.5074</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1278</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Distance: </span><span class="si">{</span><span class="n">distance</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> km&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Expected Output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Distance</span><span class="p">:</span> <span class="mf">343.38</span> <span class="n">km</span>
+</pre></div>
+</div>
+<p>---</p>
+</section>
+<section id="function-explanation">
+<h1>Function Explanation<a class="headerlink" href="#function-explanation" title="Link to this heading"></a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">haversine</span><span class="p">(</span><span class="n">lat1</span><span class="p">,</span> <span class="n">lon1</span><span class="p">,</span> <span class="n">lat2</span><span class="p">,</span> <span class="n">lon2</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates the great-circle distance between two points using the Haversine formula.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        lat1 (float): Latitude of point 1</span>
+<span class="sd">        lon1 (float): Longitude of point 1</span>
+<span class="sd">        lat2 (float): Latitude of point 2</span>
+<span class="sd">        lon2 (float): Longitude of point 2</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        float: Distance in kilometers</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Function body...</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Converts degrees to radians</p></li>
+<li><p>Applies the Haversine formula</p></li>
+<li><p>Returns the result in kilometers</p></li>
+</ul>
+<p>---</p>
+</section>
+<section id="license">
+<h1>License<a class="headerlink" href="#license" title="Link to this heading"></a></h1>
+<p>MIT License</p>
+<p>You are free to use, modify, and distribute this package.</p>
+<p>---</p>
+</section>
+<section id="contribution">
+<h1>Contribution<a class="headerlink" href="#contribution" title="Link to this heading"></a></h1>
+<p>Contributions are welcome! If you have suggestions, bug reports, or feature requests:</p>
+<ul class="simple">
+<li><p>Open an issue on GitHub</p></li>
+<li><p>Submit a pull request</p></li>
+<li><p>Or just say hi :)</p></li>
+</ul>
+<p>---</p>
+</section>
+<section id="roadmap">
+<h1>Roadmap<a class="headerlink" href="#roadmap" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>[x] Add Haversine formula</p></li>
+<li><p>[ ] Add geodesic/Vincenty support</p></li>
+<li><p>[ ] Accept location input from JSON or tuple</p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Rüya Beste Güngör.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
